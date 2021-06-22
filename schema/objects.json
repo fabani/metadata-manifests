@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "xsd":	"http://www.w3.org/2001/XMLSchema#",
+    "identifier": {
+      "@id": "https://schema.org/identifier"
+    },
+    "name": {
+      "@id":  "https://schema.org/name"
+    },
+    "dateCreated": {
+      "@id":  "https://schema.org/dateCreated"
+    },
+    "dateModified": {
+      "@id":  "https://schema.org/dateModified"
+    },
+    "contentSize": {
+      "@id":  "https://schema.org/contentSize"
+    },
+    "contentUrl": {
+      "@id":  "https://schema.org/contentUrl"
+    },
+    "encodingFormat": {
+      "@id":  "https://schema.org/encodingFormat"
+    },
+    "checksum": {
+      "@id":  "https://spdx.org/rdf/terms/#checksum"
+    },
+    "checksumValue": {
+      "@id":  "https://spdx.org/rdf/terms/#checksumValue"
+    },
+    "checksumAlgorithm": {
+      "@id": "http://spdx.org/rdf/terms#ChecksumAlgorithm"
+    },
+    "objects": "https://github.com/SUNET/metadata-manifests#Objects",
+    "immutable": {
+      "@id": "https://github.com/SUNET/metadata-manifests#Immutable",
+      "@type": "xsd:boolean"
+    }
+  }
+}

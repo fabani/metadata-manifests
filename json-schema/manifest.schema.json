@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/manifest.schema.json",
+  "title": "Metadata manifest",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "description": "Unique identifiers for the storage, http://purl.org/dc/terms/identifier",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "publisher": {
+      "description": "An entity responsible for making the resource available. http://purl.org/dc/terms/publisher",
+      "type": "string"
+    },
+    "creator": {
+      "description": "eppn from SWAMID of the creator, http://purl.org/dc/terms/creator",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rightsHolder": {
+      "description": "A organization owning or managing rights over the resource. http://purl.org/dc/terms/rightsHolder",
+      "type": "string"
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "description": "Unique identifiers for the object, https://schema.org/identifier",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of the object, https://schema.org/name",
+            "type": "string"
+          },
+          "dateCreated": {
+            "description": "Date of creation, https://schema.org/dateCreated",
+            "type": "date-time"
+          },
+          "dateModified": {
+            "description": "Date when object was most recently modified, https://schema.org/dateModified",
+            "type": "date-time"
+          },
+          "contentSize": {
+            "description": "Object size in bytes, https://schema.org/contentSize",
+            "type": "integer"
+          },
+          "contentUrl": {
+            "description": "URL for the content of the object, https://schema.org/contentUrl",
+            "type": "string"
+          },
+          "encodingFormat": {
+            "description": "Media Type, https://schema.org/encodingFormat",
+            "type": "string"
+          },
+          "immutable": {
+            "description": "Indicates whether this object may change or not",
+            "type": false
+          },
+          "checksum": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "checksumValue": {
+                  "description": "Value of the checksum, http://spdx.org/rdf/terms#checksumValue",
+                  "type": "string"
+                },
+                "checksumAlgorithm": {
+                  "description": "Algorithm used for checksum, http://spdx.org/rdf/terms#ChecksumAlgorithm",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [ "identifier", "name", "checksum" ]
+      }
+    }
+  },
+  "required": [ "identifier", "creator", "rightsHolder" ]
+}
