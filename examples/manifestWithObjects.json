@@ -1,14 +1,8 @@
 {
-  "@context": {
-    "mm": "https://raw.githubusercontent.com/SUNET/metadata-manifests/master/schema/mm.jsonld",
-    "@vocab": "https://raw.githubusercontent.com/SUNET/metadata-manifests/master/schema/objects.jsonld"
-  },
-  "@base": "https://datastore.example.edu/datasets/3f2a775e-f33a-461e-a49c-b9450c7da4",
-  "@id": "https://datastore.example.edu/datasets/3f2a775e-f33a-461e-a49c-b9450c7da4",
-  "mm:publisher": "Pendylprojektet @ Example EDU",
-  "mm:creator": ["kalkyl@example.edu"],
-  "mm:identifier": ["3f2a775e-f33a-461e-a49c-b9450c7da4"],
-  "mm:rightsHolder": "example.edu",
+  "publisher": "Pendylprojektet @ Example EDU",
+  "creator": ["kalkyl@example.edu"],
+  "identifier": ["3f2a775e-f33a-461e-a49c-b9450c7da4"],
+  "rightsHolder": "example.edu",
   "objects": [
     {
       "identifier": "9e3bb2e3-443c-4763-97f3-a25eb9c8639d",

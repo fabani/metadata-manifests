@@ -46,11 +46,13 @@
           },
           "dateCreated": {
             "description": "Date of creation, https://schema.org/dateCreated",
-            "type": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "dateModified": {
             "description": "Date when object was most recently modified, https://schema.org/dateModified",
-            "type": "date-time"
+            "format": "date-time",
+            "type": "string"
           },
           "contentSize": {
             "description": "Object size in bytes, https://schema.org/contentSize",
@@ -66,7 +68,7 @@
           },
           "immutable": {
             "description": "Indicates whether this object may change or not",
-            "type": false
+            "type": "boolean"
           },
           "checksum": {
             "type": "array",
